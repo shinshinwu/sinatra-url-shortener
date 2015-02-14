@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Random URL Generator</h1>
+  <%# TODO:
+  1. If user is not signed in - display "Welcome".
+  2. If user is signed in then  display all user's urls %>
+  <ul>
+    <% @urls.each do |url| %>
+    <li><%= url.original_address %> has been shortened to: <a href="/<%= url.slug %>">www.awesomegenerator/<%= url.slug %>.com</a></li>
+    <% end %>
+  </ul>
+
+  <!-- this form sends data (the <input> elements) to the
+       URL '/grandma' using the HTTP verb 'post', which
+       matches the 'post /grandma' route defined in
+       app/controller/index.rb -->
+  <form action="/sessions/<%= @user.id %>/urls" method="post">
+    <lable for="original_url">Enter a webaddress you would like to generate random url for:</lable>
+    <br>
+    <input type="text" name="original_address" value="example: http://www.google.com" />
+    <br>
+    <br>
+    <input type="submit" value="Generate shortened URL!">
+  </form>
+</div>

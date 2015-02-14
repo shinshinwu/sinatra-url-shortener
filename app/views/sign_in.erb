@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Sign In</h1>
+
+  <!-- need to implement error flashing -->
+  <% if @error %>
+  <div class="errors"><%= @error %></div>
+  <% end %>
+
+  <form id="sign-in" method="post" action="/sessions">
+    <label class="label" for="email">Email: </label>
+    <input type="email" name="email" placeholder="e.g., me@example.com">
+    <br>
+    <label class="label" for="password">Password: </label>
+    <input type="password" name="password" placeholder="Please enter 6 or more characters">
+    <br>
+    <br>
+    <div class="submit"><input type="submit" value="Sign Me In!"></div>
+
+  </form>
+
+</div>

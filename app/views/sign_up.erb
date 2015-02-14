@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Sign Up</h1>
+
+  <form id="sign-up" method="post" action="/users">
+    <label class="label" for="name">Username: </label>
+    <input type="text" name="user[username]" placeholder="average joe...">
+    <br>
+
+    <lable class="label" for="email">Email: </lable>
+    <input type="email" name="user[email]" placeholder="email@example.com">
+    <br>
+
+    <label class="label" for="password">Password: </label>
+    <input type="password" name="user[password]" placeholder="6 or more characters">
+    <br>
+
+    <div class="submit"><input type="submit" value="Sign Me Up!"></div>
+  </form>
+</div>
